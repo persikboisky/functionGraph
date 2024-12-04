@@ -1,0 +1,20 @@
+.divFun {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 900px;
+}
+
+.titleFun {
+    margin-left: 160px;
+}
+
+.fun {
+    margin: 10px;
+    width: 420px;
+    height: 180px;
+    border: 2px solid black;
+    border-radius: 10px;
+}

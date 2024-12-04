@@ -1,0 +1,23 @@
+.titleCycle{
+    margin-left: 150px;
+}
+
+.divCycle {
+    background: rgb(144, 125, 6);
+    border: 2px solid black;
+    width: 425px;
+    border-radius: 10px;
+}
+
+.cycle {
+    background: rgb(186, 95, 21);
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 400px;
+    height: 150px;
+}
+
+.instructions{
+    font-size: 20px;
+}

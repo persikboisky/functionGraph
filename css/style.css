@@ -1,0 +1,19 @@
+canvas {
+    border: 2px solid black;
+}
+
+.canvasDiv {
+    display: flex;
+    justify-content: center;
+    margin-top: -675px;
+}
+
+input {
+    margin: 5px;
+}
+
+button {
+    margin-left: 6px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

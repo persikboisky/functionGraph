@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Графики функций</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/fun.css">
+    <link rel="stylesheet" href="css/cycle.css">
+</head>
+
+<body>
+    <div>
+        <!--принимаем параметры переменных-->
+        <div class="divCycle">
+            <h1 class="titleCycle">Циклы</h1>
+            <div class="cycle">
+                <!--цикл А-->
+                <div>
+                    <input id="sA">
+                    <label>Начало</label>
+                </div>
+                <div>
+                    <input id="fA">
+                    <label>Конец</label>
+                </div>
+                <div>
+                    <input id="pA">
+                    <label>Увеличить на</label>
+                </div>
+                <button onclick="clearCycle('a')">
+                    clear
+                </button>
+                <div>Этот цикл работает с переменной "a"</div>
+            </div>
+            <div class="cycle">
+                <!--цикл В-->
+                <div>
+                    <input id="sB">
+                    <label for="">Начало</label>
+                </div>
+                <div>
+                    <input id="fB">
+                    <label for="">Конец</label>
+                </div>
+                <div>
+                    <input id="pB">
+                    <label for="">увеличить на</label>
+                </div>
+                <button onclick="clearCycle('b')">
+                    clear
+                </button>
+                <div>Этот цикл работает с переменной "b"</div>
+            </div>
+            <div class="cycle">
+                <!--цикл С-->
+                <div>
+                    <input id="sC">
+                    <label for="">Начало</label>
+                </div>
+                <div>
+                    <input id="fC">
+                    <label for="">Конец</label>
+                </div>
+                <div>
+                    <input id="pC">
+                    <label for="">увеличить на</label>
+                </div>
+                <button onclick="clearCycle('c')">
+                    clear
+                </button>
+                <div>Этот цикл работает с переменной "c"</div>
+            </div>
+            <div class="cycle">
+                <!--цикл D-->
+                <div>
+                    <input id="sD">
+                    <label for="">Начало</label>
+                </div>
+                <div>
+                    <input id="fD">
+                    <label for="">Конец</label>
+                </div>
+                <div>
+                    <input id="pD">
+                    <label for="">увеличить на</label>
+                </div>
+                <button onclick="clearCycle('d')">
+                    clear
+                </button>
+                <div>Этот цикл работает с переменной "d"</div>
+            </div>
+        </div>
+
+        <!--рисуем графики функций-->
+        <div class="canvasDiv">
+            <img id="img" style="display: none;" src="cell.png">
+            <canvas id="display"></canvas>
+        </div>
+
+        <!--принимаем фунции графиков-->
+        <div class="divFun">
+            <h1 class="titleFun">Функции</h1>
+            <div class="fun">
+                <div>
+                    <input id="aColor" type="text">
+                    <label for="">Цвет</label>
+                </div>
+                <div>
+                    <input id="aX" type="text">
+                    <label style="font-size: 13px;" for="">
+                        X (можно использовать переменную "a")
+                    </label>
+                </div>
+                <div>
+                    <input id="aY" type="text">
+                    <label style="font-size: 13px;" for="">
+                        Y (можно использовать переменную "a")
+                    </label>
+                </div>
+                <div>
+                    <input class="slider" type="range" name="volume" min="0" max="10" id="aSizePixel" type="text">
+                    <label id="aSizePixelLabel" for="volume">
+                    </label>
+                </div>
+                <div>
+                    <input class="slider" type="range" name="volume" min="1" max="20" id="aSlider" type="text">
+                    <label for="" id="aSliderInput"></label>
+                </div>
+                <button onclick="clearFun('a')">clear</button>
+            </div>
+            <div class="fun">
+                <div>
+                    <input id="bColor" type="text">
+                    <label for="">Цвет</label>
+                </div>
+                <div>
+                    <input id="bX" type="text">
+                    <label style="font-size: 13px;" for="">
+                        X (можно использовать переменную "b")
+                    </label>
+                </div>
+                <div>
+                    <input id="bY" type="text">
+                    <label style="font-size: 13px;" for="">
+                        Y (можно использовать переменную "b")
+                    </label>
+                </div>
+                <div>
+                    <input class="slider" type="range" name="volume" min="0" max="10" type="text" id="bSizePixel"
+                        type="text">
+                    <label id="bSizePixelLabel" for="volume"></label>
+                </div>
+                <div>
+                    <input class="slider" type="range" name="volume" min="1" max="20" id="bSlider" type="text">
+                    <label for="" id="bSliderInput"></label>
+                </div>
+                <button onclick="clearFun('b')">clear</button>
+            </div>
+            <div class="fun">
+                <div>
+                    <input id="cColor" type="text">
+                    <label for="">Цвет</label>
+                </div>
+                <div>
+                    <input id="cX" type="text">
+                    <label style="font-size: 13px;" for="">
+                        X (можно использовать переменную "c")
+                    </label>
+                </div>
+                <div>
+                    <input id="cY" type="text">
+                    <label style="font-size: 13px;" for="">
+                        Y (можно использовать переменную "c")
+                    </label>
+                </div>
+                <div>
+                    <input class="slider" type="range" name="volume" min="0" max="10" type="text" id="cSizePixel"
+                        type="text">
+                    <label id="cSizePixelLabel" for="volume"></label>
+                </div>
+                <div>
+                    <input class="slider" type="range" name="volume" min="1" max="20" id="cSlider" type="text">
+                    <label for="" id="cSliderInput"></label>
+                </div>
+                <button onclick="clearFun('c')">clear</button>
+            </div>
+            <div class="fun">
+                <div>
+                    <input id="dColor" type="text">
+                    <label for="">Цвет</label>
+                </div>
+                <div>
+                    <input id="dX" type="text">
+                    <label style="font-size: 13px;" for="">
+                        X (можно использовать переменную "d")
+                    </label>
+                </div>
+                <div>
+                    <input id="dY" type="text">
+                    <label style="font-size: 13px;" for="">
+                        Y (можно использовать переменную "d")
+                    </label>
+                </div>
+                <div>
+                    <input class="slider" type="range" name="volume" min="0" max="10" type="text" id="dSizePixel"
+                        type="text">
+                    <label id="dSizePixelLabel" for="volume"></label>
+                </div>
+                <div>
+                    <input class="slider" type="range" name="volume" min="1" max="20" id="dSlider" type="text">
+                    <label for="" id="dSliderInput"></label>
+                </div>
+                <button onclick="clearFun('d')">clear</button>
+                <div class="instructions">
+                    <h1 class="instructions">
+                        sin() - Math.sin(),
+                        cos() - Math.cos()
+                    </h1>
+                    <h1 class="instructions">
+                        корень - Math.sqrt(),
+                        модуль - Math.abs()
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="margin-left: 10px;">
+        автор: Persicboisky
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/clear.js"></script>
+</body>
+
+</html>
